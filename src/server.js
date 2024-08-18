@@ -8,7 +8,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-const PORT = 5000
+const PORT = process.env.PORT || 5000
 
 
 
@@ -88,5 +88,5 @@ app.delete('/:id', async (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log(`O servidor esta rodando na porta ${PORT} `)
+    console.log(`O servidor esta rodando na porta ${PORT}`)
 })
